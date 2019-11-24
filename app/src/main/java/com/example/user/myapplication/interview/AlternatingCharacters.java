@@ -23,6 +23,6 @@ public class AlternatingCharacters {
     public static void main(String[] args) {
         String testString = "AAABBB";
         int result = alternatingCharacters(testString);
-        System.out.println(result); // Expected result is 1 (the 2 closest numbers are 98 and 99)
+        System.out.println(result); // Expected resu is 1 (the 2 closest numbers are 98 and 99)
     }
 }
