@@ -1,0 +1,10 @@
+sudo docker images
+sudo docker ps
+sudo docker ps -a
+sudo docker pull ubuntu
+sudo docker run -it ubuntu
+
+apt search httpd
+apt install nginx-light
+apt install php
+apt install mysql-server
