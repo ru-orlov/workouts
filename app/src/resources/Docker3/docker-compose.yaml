@@ -1,0 +1,31 @@
+version: '2'
+services:
+  db:
+    image: mysql
+    container_name: db_server
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+        - 55:3306
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+  php:
+    image: php
+    container_name: php_engine
+    expose:
+        - 9000
+    volumes:
+        - ./php/www:/var/www/html
+  apache2:
+    image: webdevops/apache
+    container_name: apache_server
+    environment:
+        WEB_DOCUMENT_ROOT: /var/www/html
+    volumes:
+        - ./php/www:/var/www/html
+    ports:
+        - 71:80
+        - 443:443
+    links:
+        - php
+        - db
