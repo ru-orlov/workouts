@@ -1,4 +1,4 @@
-package com.example.user.myapplication;
+package com.example.user.myapplication.JavaPart;
 
 import java.io.*;
 import java.util.*;
